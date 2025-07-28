@@ -79,14 +79,46 @@ console.log(O2);
 console.log(O);
 
 
+// typeof  &   instanceof 
+
+console.log(typeof(undefined));  // undefined
+console.log(typeof(Object));      // funtion
+console.log(typeof(function(){}));
+console.log(typeof(null));
+
+console.log("a" * 2); // nan failed number operation 
+console.log(typeof(NaN));  // number
 
 
+console.log("a" - 4); // nan
+console.log("5"  - 4) // 1;
+
+console.log( 5 + 5 + "a" + 4  + 3);  // 10a5
 
 
+// type of use with PRIMITIVE data type 
+// instance of use with REFERENCE data type 
+
+let object = {
+  name : "archi" 
+}
+console.log(typeof(object ));
+console.log( object instanceof Object);
 
 
+function abcd (){
+  return "hey"
+}
+console.log(typeof(abcd));               // function 
+console.log( abcd instanceof Function); // true 
 
 
+let arr = [];
+console.log(typeof(arr));             // **object   it is array
+console.log( arr instanceof Array);  // true ;
 
+
+let h = 34 ;
+console.log( h instanceof Number ); // false  *pri
 
 
