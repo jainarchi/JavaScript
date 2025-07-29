@@ -1,6 +1,7 @@
 // function   
 // why ?  to run a block of code when it calls only 
 
+// reg function
 function add( a , b){         // regular func   
     return a + b ;
 }
@@ -13,19 +14,21 @@ function abc ( a = 1  , b = "hey"){
 abc(2 , "Hello" );
 
 
-function sub ( a = 0 , b = 0){ // can set def val if not obtain   def val  undefined 
+function sub ( a = 0 , b = 0){   // can set def val if not obtain   , otherwise def val - undefined 
     console.log(a , b);
     console.log(a + b);
 }
-sub( 4 );
+sub( 4 );                            // undefine + 4 -> NaN
 
 
 
+// func expression 
 let fun = function (){      
  console.log("func expression");
  
 }
 
+// arrow func 
 let arfun = ( )=>{
    console.log("fat arrow func");
 }
@@ -37,7 +40,7 @@ function func (a , b, c , ...val){         // ... rest operator in parameter   a
 func( 3 , 6 , 9 , 6 ,10 , 7 , 9);
 
 
-// first class function - func can treat as val 
+// first class function - func can treat as value 
 
 function abc (val){
     val(); 
@@ -63,8 +66,7 @@ abc( function(){                                                // first cls fun
 
  function xyz (){
     return function (){
-        console.log("func return from hof , then use () for run");
-        
+             console.log("func return from hof , then use () for run");
     }
  }
  xyz()() ;
@@ -78,11 +80,12 @@ let a = 12 ;
  }
 
  function xy (){
-    a++ ;  // impure fuction change outside variable 
+    a ++ ;  // impure fuction change outside variable 
  }
 
 
- // clousers  -> func return another fun , returned func use some variable of parent func 
+// clousers  -> func return another fun , returned func use some variable of parent func 
+//            inner func parent func ke variable ko yaad rakhta h even outer func executed  
 function abc (){
     let a = 10 ;
     return function (){
@@ -99,7 +102,7 @@ function fun1 (){
 
     function fun2 (){
         let b = 20
-        console.log(a); //a can access due to scope hirarchy
+        console.log(a);      // a can access due to scope hirarchy
     
         function fun3 (){
             let c = 30 ;
@@ -109,11 +112,10 @@ function fun1 (){
     }
     fun2()
 }
-
 fun1();
 
 
-// IIFE 
+// IIFE Immediate Invoke Function Expression 
 (function (){
  let id = 80 ; 
 
@@ -122,12 +124,11 @@ fun1();
  console.log(id);
  
 })();
-
 // console.log(id);  //     id not define 
 
 
 
-// HOISTING IN FUNCTION 
+//-------------- HOISTING IN FUNCTION ----------------
 
 hello();                    // func statement hoist hote h   hello ! 
 
@@ -142,6 +143,11 @@ let dance = function (){
     console.log("dance krlo phele ");
     
 }
+
+// regular func (use function keyword )  hoist hota h 
+// func expression & arrow function hoist NAHI hote  [ only variable hoist hote h , func body nahi ]
+
+-------------------------------------------------------
 
 // que 
 
@@ -185,6 +191,7 @@ function f (){
 }
 console.log(f()); // undefined 
 
+
 //6 pass a func into another func and execute it inside 
 
 function run ( stop ){                   // run - hof
@@ -203,6 +210,7 @@ let newAr  = [1 , 2, 3].map( function (e){
      return e * e ;
 })
 console.log(newAr);
+
 
 // 7 eg of impure & pure func
 let c = 0 ;
@@ -275,13 +283,9 @@ calulate10(200);
 let cal20 = discount(20);
 cal20(200);
 
-//  HOISTING IN FUNCTION - 
-// regular func (use function keyword )  hoist hota h 
-// func expression & arrow function hoist NAHI hote  [ only variable hoist hote h , func body nahi ]
 
 // when to use reg or arrow fun ?
 // use any of them , but inside object always use reg func 
-
 
 
 
