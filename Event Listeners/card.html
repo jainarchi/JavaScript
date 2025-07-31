@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        
+        .cd {
+            background:#cbead0  ;
+            /* Slight transparency */
+            border-radius: 10px;
+            max-width: 200px;
+            padding: 16px;
+            margin: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cd:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .text {
+            font-family: 'Gilroy', sans-serif;
+            /* Use Gilroy if available */
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #334155;
+           
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" class="flex flex-col items-center space-y-4 p-4 bg-green-100 ">
+
+        <input type="text" name="name" placeholder="name" class="p-2 border rounded w-full max-w-sm" />
+
+        <input type="text" name="prof" placeholder="profession" class="p-2 border rounded w-full max-w-sm" />
+
+        <input type="text" name="about" placeholder="about yourself" class="p-2 border rounded w-full max-w-sm" />
+
+        <input type="submit" name="submit" id="submit"
+            class="p-2 bg-green-500 text-white rounded w-full max-w-sm cursor-pointer" />
+
+    </form>
+
+
+
+    <div id="cards" class="p-2 m-2  ">
+
+
+    </div>
+
+
+
+
+    <script src="submitEvent.js"></script>
+</body>
+
+</html>
