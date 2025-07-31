@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change eventListener view </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-black text-white ">
+
+
+  <div class="flex justify-center items-center h-screen bg-black">
+    <h1 id="bgtext" class=" text-gray-500 text-center text-9xl disabled">
+      3
+    </h1>
+  </div>
+
+
+
+
+
+
+  <script>
+    // screen pr change - window m change 
+
+    let bgtext = document.querySelector("#bgtext");
+
+    window.addEventListener("keyup", function (dets) {
+
+      if (dets.key === " ") bgtext.textContent = "SPC"
+      else bgtext.textContent = `${dets.key}`
+
+    })
+
+  </script>
+</body>
+
+</html>
