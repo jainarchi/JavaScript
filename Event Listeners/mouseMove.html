@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-black overflow-hidden>
+">
+
+    <div id="ball" class="w-40 h-40 bg-red-600 rounded-full absolute "></div>
+
+
+
+    <script>
+        let ball = document.querySelector("#ball");
+
+
+        window.addEventListener("mousemove", function (dets) {
+            console.log(dets.clientX, dets.clientY);
+            // ball.style.top = dets.clientY + "px"
+            // ball.style.left = dets.clientX + "px";
+
+            const ballSize = 160 ;
+            const offsetX = ballSize / 2;
+            const offsetY = ballSize / 2;
+
+            ball.style.left = (dets.clientX - offsetX) + "px";
+            ball.style.top = (dets.clientY - offsetY) + "px";
+
+
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
