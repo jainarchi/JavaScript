@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-hidden">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Mouse Over & out </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+   <style>
+     #box {
+      transition: background-color 0.5s ease-in-out;
+    }
+   </style>
+   
 </head>
-<body>
-    
+
+<body class="bg-black overflow-hidden>">
+
+    <div id="box" class="w-60 h-60 bg-red-600 "></div> 
+
+
+    <script>
+      let box = document.querySelector("#box")
+      
+      box.addEventListener("mouseover" , function(dets){
+        box.style.backgroundColor = "yellow"
+      })
+
+      box.addEventListener("mouseout" , function(){
+        box.style.backgroundColor = "red"
+      })
+      
+   
+    </script>
 </body>
+
 </html>
