@@ -10,8 +10,8 @@ let bd = document.querySelector("#d")
 // **stop Propagation is used to stop event propagation
 //  where we add stop prop  - prop stop at that point 
 
-// without stopProp  -> a b - btn - d c 
-//  stop pop add in only bb  -> a b 
+// without stopProp sequence   -> a b - btn - d c 
+// when stopProp first added in bb  -> a  b 
 
 
 
