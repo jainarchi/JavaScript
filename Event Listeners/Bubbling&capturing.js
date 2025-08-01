@@ -13,33 +13,29 @@ let d = document.querySelector("#d")
 
 
 btn.addEventListener("click" , function(){
-    console.log("btn.clicked");
-    prompt("btn clicked")
+    alert("btn clicked")
 
 })
 
 a.addEventListener("click" , function(){
-     console.log("a  clicked");
-    prompt("a clicked")
+    alert("a clicked")
 
 } , true)                                                   // true - cap on   by def - off 
 
 
 b.addEventListener("click" , function(){
-    console.log("b clicked");
-    prompt("b clicked")
+    alert("b clicked")
 })
 
 
 c.addEventListener("click" , function(){
-    console.log("c clicked");
-    prompt("c clicked")
+    alert("c clicked")
+    
 } , true )
 
 d.addEventListener("click" , function(){
-   console.log("d clicked");
-   prompt("d clicked")
-   
+   alert("d clicked")
 })
 
 // a - c - btn - d - b 
+
