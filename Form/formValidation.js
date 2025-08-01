@@ -24,7 +24,7 @@ submit.addEventListener("click", function (dets) {
     }
 
     else {
-        nm.textContent = inputs[0].value;
+        nm.textContent = inputs[0].value;            // nm.value
         password.textContent = inputs[2].value;
         email.textContent = inputs[1].value;
         msg.textContent = "your response has been recorded";
@@ -38,4 +38,5 @@ submit.addEventListener("click", function (dets) {
 
 
 })
+
 
