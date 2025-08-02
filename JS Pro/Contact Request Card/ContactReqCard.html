@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ContactReqCard.css">
+</head>
+
+<body>
+
+
+    <body>
+
+
+        <div class="form-container  ">
+            <h2>Submit Request</h2>
+            <form>
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" class="input-text" >
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" class="input-text" >
+
+                <label for="number">Phone Number*</label>
+                <input type="tel" id="number" name="number" class="input-text" >
+
+                <div class="category-options">
+                    <label>Category*</label>
+                    <label><input type="radio" name="category" value="important" > Important</label>
+                    <label><input type="radio" name="category" value="emergency"> Emergency</label>
+                    <label><input type="radio" name="category" value="consultant"> Consultant</label>
+                </div>
+
+                <button id="submit" type="submit">Send</button>
+                <button id="cancel" type="button">cancel</button>
+            </form>
+        </div>
+
+
+
+        <div id="cardArea" class="record hide ">
+
+            <button id="plusbtn" class="plus-circle">+</button>
+
+            <div id="cards">
+
+                
+            </div>
+
+            <div class="circle-column">
+                <button class="circle-btn green"></button>
+                <button class="circle-btn red"></button>
+                <button class="circle-btn orange"></button>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script src="ContactReqCard.js"></script>
+    </body>
+
+</html>
