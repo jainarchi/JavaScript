@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         body{
+            background: #000;
+            color: whitesmoke;
+            font-family: sans-serif;
+         }
+         .imgCont , h1{
+            width: 95%;
+            margin: auto;
+            text-align: center;
+         }
+
+         h1{
+            margin: 50px 0;
+         }
+         .imgCont > div{
+            margin-bottom: 90vw ;
+            width: 100%;
+            height: auto;
+         }
+
+         .imgCont .div{
+            background-position: center;
+            background-size: cover;
+         }
+
+         img{
+            height: auto;
+            width: 100%;
+            opacity: 0;
+         }
+         .loaded{
+            opacity: 1;
+         }
+         
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading with Intersection Observer</h1>
+
+    <div class="imgCont">
+          
+          <div><img data-src="https://i.pinimg.com/736x/1d/7b/87/1d7b87734a0e818d7018bda6f4fca207.jpg" alt="image"></div>
+          
+          <div><img data-src="https://i.pinimg.com/736x/1c/e2/fb/1ce2fb31b31f1c938bb84366320cb317.jpg" alt="image"></div>
+
+          <div><img data-src="https://i.pinimg.com/736x/62/7e/e3/627ee3255eabb850081ffc9c3a3a038a.jpg" alt="image"></div>
+    </div>
+
+    <script src="lazy_loading.js"></script>
+    
+</body>
+</html>
